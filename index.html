@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Breakout Quillo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hud" aria-label="Spielwerte">
+        <div>
+          <span class="label">Punkte</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span class="label">Quillo</span>
+          <strong id="coins">0</strong>
+        </div>
+        <div>
+          <span class="label">Level</span>
+          <strong id="level">1</strong>
+        </div>
+        <div>
+          <span class="label">Leben</span>
+          <strong id="lives">3</strong>
+        </div>
+        <div>
+          <span class="label">Power</span>
+          <strong id="power">-</strong>
+        </div>
+      </section>
+
+      <canvas id="game" width="960" height="620" aria-label="Breakout Quillo Spiel"></canvas>
+
+      <section id="homeScreen" class="screen active" aria-label="Homebildschirm">
+        <div class="screen-panel">
+          <p class="eyebrow">Breakout Quillo</p>
+          <h1>Blöcke zerstören, Quillo sammeln, Skins freischalten</h1>
+          <p class="intro">Breche Blöcke für Quillo,um im Shop neue Ball-Styles zu kaufen.</p>
+          <div class="menu-actions">
+            <button id="playButton" type="button">Spielen</button>
+            <button id="shopButton" type="button">Shop</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="shopScreen" class="screen" aria-label="Item Shop">
+        <div class="screen-panel shop-panel">
+          <div class="shop-head">
+            <div>
+              <p class="eyebrow">Item Shop</p>
+              <h2>Ball-Styles</h2>
+            </div>
+            <strong><span id="shopCoins">0</span> Quillo</strong>
+          </div>
+          <div id="skinGrid" class="skin-grid"></div>
+          <div class="menu-actions">
+            <button id="backHomeButton" type="button">Zurück</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Spielsteuerung">
+        <button id="homeButton" type="button">Home</button>
+        <button id="shopToolbarButton" type="button">Shop</button>
+        <button id="startButton" type="button">Start</button>
+        <button id="pauseButton" type="button">Pause</button>
+        <button id="resetButton" type="button">Reset</button>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
+
+
+
+
